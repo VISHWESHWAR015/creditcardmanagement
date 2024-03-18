@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css"/>
+    <title>LOGIN</title>
+</head>
+<body>
+    
+    <form action="/login" method="post">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" id="btn1" class="sub"value="Login" onclick="verify()" />
+      </form>
+      <script src="./loginform.js" ></script>
+      <script>
+        function verify(){
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
+   if(usernameInput==="VISHWESHWAR" && passwordInput==="2004"){
+        window.location.assign("./dashboard.html");
+        alert("Login successful")
+   } else if(usernameInput==="HITESH" && passwordInput==="2004"){
+    window.location.assign("./dashboard.html");
+        alert("Login successful")
+   } else if(usernameInput==="GANESH" && passwordInput==="2003"){
+    window.location.assign("./dashboard.html");
+        alert("Login successful")
+   } else if(usernameInput==="ANSHUL" && passwordInput==="2005"){
+    window.location.assign("./dashboard.html");
+        alert("Login successful")
+   } 
+    else {
+     alert("Invalid info");
+   }
+}
+      </script>
+</body>
+</html>
